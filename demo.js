@@ -78,15 +78,28 @@
 //   items[i].textContent = "New Item" + i;
 // }
 
-
 // QuerySelector
-let submitButton = document.querySelector('btn')
+let submitButton = document.querySelector("btn");
 
 //Will not work
 // console.log(submitButton.value)
 
 // For that
 let sbmtButton = document.querySelector('input[type="submit"]');
-console.log(`Value : ${sbmtButton.value}`)
+console.log(`Value : ${sbmtButton.value}`);
 
 // Lets Change this
+let changeBtn = document.querySelector("btn btn-change");
+
+const changeButton = () => {
+  sbmtButton.value = "Send";
+  alert("You have changed the submit to send");
+};
+
+// querySelectorAll()
+let odd = document.querySelectorAll("li:nth-child(odd)");
+
+for (var i = 0; i < odd.length; i++) {
+  // console.log(odd[i])
+  odd[i].style.backgroundColor = '#ddd'
+}
